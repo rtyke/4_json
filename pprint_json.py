@@ -19,8 +19,8 @@ def convert_to_json(file_data):
         return None
 
 
-def pretty_print_json(data):
-    prettified_json = json.dumps(data, indent=4, sort_keys=True,
+def pretty_print_json(json_data):
+    prettified_json = json.dumps(json_data, indent=4, sort_keys=True,
                                  ensure_ascii=False)
     return prettified_json
 
