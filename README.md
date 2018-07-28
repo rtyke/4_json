@@ -1,17 +1,19 @@
 # Prettify JSON
 
-[TODO. There will be project description]
+Accept path to JSON file, loads it, adds indentation and line breaks and output it's prettified content to the console.
 
 # Quickstart
 
-[TODO]
 
 Example of script launch on Linux, Python 3.5:
 
 ```bash
 
 $ python pprint_json.py <path to file>
-# TODO add output example
+{'key1' : [{'inner_key1': 'some_value'
+            'inner_key2': 'another_value'}
+            {....}],
+  'key2' : ...}
 
 ```
 
