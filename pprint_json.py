@@ -13,17 +13,18 @@ def read_data(file_path):
 
 def load_data(file_data):
     try:
-        json_data = json.loads(file_data)
-        return json_data
+        return json.loads(file_data)
     except json.decoder.JSONDecodeError:
         return None
 
 
 def pretty_print_json(json_data):
-    prettified_json = json.dumps(json_data,
-                                 indent=4,
-                                 sort_keys=True,
-                                 ensure_ascii=False)
+    prettified_json = json.dumps(
+        json_data,
+        indent=4,
+        sort_keys=True,
+        ensure_ascii=False
+    )
     print(prettified_json)
 
 
@@ -36,8 +37,8 @@ if __name__ == '__main__':
     file_data = read_data(json_file_path)
     if not file_data:
         sys.exit('Введенный путь к файлу в формате json не верен')
-    loaded_dictionary = load_data(file_data)
+    loaded_data = load_data(file_data)
 
-    if not loaded_dictionary:
+    if not loaded_data:
         sys.exit('Файл не в формате json')
-    pretty_print_json(loaded_dictionary)
+    pretty_print_json(loaded_data)
