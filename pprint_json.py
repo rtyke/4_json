@@ -18,9 +18,9 @@ def load_data(file_data):
         return None
 
 
-def pretty_print_json(json_data):
+def pretty_print_json(dictionary):
     prettified_json = json.dumps(
-        json_data,
+        dictionary,
         indent=4,
         sort_keys=True,
         ensure_ascii=False
